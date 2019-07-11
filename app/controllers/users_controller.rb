@@ -25,8 +25,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
   def update
     if @user.update(user_params)
       render json:{status: 1, id: @user.id.to_s, notice: "修改成功", errors: []}
